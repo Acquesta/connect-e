@@ -45,16 +45,16 @@ Siga estas etapas para clonar e instalar o projeto localmente:
 4. **Inicie o servidor de desenvolvimento:**
 
    ```bash
-   npm start
+   npm run dev
    ```
 
    ou
 
    ```bash
-   yarn start
+   yarn run dev
    ```
 
-   O projeto será iniciado em `http://localhost:3000`.
+   O projeto será iniciado em `http://localhost:5173`.
 
 ## Como Usar
 
