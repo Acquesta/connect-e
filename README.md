@@ -1,5 +1,5 @@
 
-# Nome do Projeto
+# Connect-e
 
 Breve descrição do projeto, o que ele faz e o objetivo principal.
 
@@ -19,7 +19,7 @@ Siga estas etapas para clonar e instalar o projeto localmente:
 1. **Clone o repositório:**
 
    ```bash
-   git clone https://github.com/usuario/nome-do-projeto.git
+   git clone https://github.com/Acquesta/connect-e.git
    ```
 
 2. **Navegue até o diretório do projeto:**
