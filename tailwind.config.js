@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {},
     colors: {
-      'azulMahindra': '#0000FF'
+      'azulMahindra': '#0000FF',
+      'branco': '#ffffff'
     }
   },
   plugins: [],

@@ -1,7 +1,12 @@
+import SectionImage from "../components/sectionImage";
+import sobreBg from '../assets/image/sobreImg.png'
+
 function Home() {
     return ( 
         <>
-            <h1 className="text-4xl">Consulte nossa nova plataforma <span className="font-bold">GAMEFICADA</span></h1>
+            <SectionImage
+                src={sobreBg}
+            />
         </>
      );
 }
