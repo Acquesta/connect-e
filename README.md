@@ -25,7 +25,7 @@ Siga estas etapas para clonar e instalar o projeto localmente:
 2. **Navegue até o diretório do projeto:**
 
    ```bash
-   cd nome-do-projeto
+   cd connect-e
    ```
 
 3. **Instale as dependências:**
