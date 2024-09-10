@@ -39,8 +39,11 @@ export default function Hotbar() {
                         </div>
                     </div>
                     <div>
+                        <div className='relative'>
+
                         <img className='w-12 h-12 cursor-pointer' src={usuario} alt="" onClick={clicou}/>
-                        <div className=''></div>
+                        <div className='absolute w-[330px] h-10 right-0 bg-azulMahindra'></div>
+                        </div>
                     </div>
                 </div>
             </div>
