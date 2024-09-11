@@ -1,12 +1,17 @@
 import logo from '../../assets/image/logo.png'
 import usuario from '../../assets/icons/usuario2.svg'
 import busca from '../../assets/icons/busca.svg'
+import { useState } from 'react'
 
 
 export default function Hotbar() {
 
+    const [ card, setCard ] = useState('none');
+
+
+
     function clicou(){
-        alert('Clicou no botão')
+        setCard('block')
     }
 
     return (
@@ -40,9 +45,12 @@ export default function Hotbar() {
                     </div>
                     <div>
                         <div className='relative'>
-
-                        <img className='w-12 h-12 cursor-pointer' src={usuario} alt="" onClick={clicou}/>
-                        <div className='absolute w-[330px] h-10 right-0 bg-azulMahindra'></div>
+                            <img className='w-12 h-12 cursor-pointer' src={usuario} alt="" onClick={clicou}/>
+                            <div className='absolute w-[330px] h-14 right-[-20px] bg-branco m-2 rounded-full flex items-center justify-around drop-shadow-2xl'>
+                                <div className='absolute bg-azulMahindra h-5 w-5 top-0 right-[26px] rotate-45 drop-shadow-2xl'></div>
+                                <a className='text-branco bg-azulMahindra px-7 py-2 rounded-full text-lg' href="">Registrar</a>
+                                <a className='text-azulMahindra text-lg' href="">Entrar</a>
+                            </div>
                         </div>
                     </div>
                 </div>
