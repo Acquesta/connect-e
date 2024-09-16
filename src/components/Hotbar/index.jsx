@@ -59,21 +59,15 @@ export default function Hotbar() {
                 }}
               />
               <div
-                className={`${card} w-[330px] h-14 right-[-20px] bg-branco m-2 mt-[1rem] rounded-full flex items-center justify-around drop-shadow-2xl`}
+                className={`z-40 ${card} w-[330px] h-14 right-[-20px] bg-branco m-2 mt-[1rem] rounded-full flex items-center justify-around drop-shadow-2xl`}
                 onMouseLeave={() => {
                   setCard("hidden");
                 }}
               >
                 <Polygon className="absolute top-[-10px] right-[26px] w-[20px]" />
-                <a
-                  className="text-branco bg-azulMahindra px-7 py-2 rounded-full text-lg"
-                  href=""
-                >
-                  Registrar
-                </a>
-                <a className="text-azulMahindra text-lg" href="">
-                  <NavLink to={"/login"}>Login</NavLink>
-                </a>
+                
+                <NavLink className="text-branco bg-azulMahindra px-7 py-2 rounded-full text-lg" to={"/registrar"}>Registrar</NavLink>
+                <NavLink className="text-azulMahindra text-lg" to={"/login"}>Login</NavLink>
               </div>
             </div>
           </div>

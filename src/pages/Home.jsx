@@ -1,8 +1,12 @@
+import CardHome from "../components/cardHome/CardHome";
+import SectionProjeto from "../components/sectionProjeto";
 
 function Home() {
     return ( 
         <>
-           <h1>Página home</h1>
+           <CardHome />
+           <div className="bg-azulMahindra h-1 my-14"></div>
+           <SectionProjeto />
         </>
      );
 }

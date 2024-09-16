@@ -9,6 +9,7 @@ import App from './App.jsx'
 import Home from './pages/Home.jsx'
 import Login from './pages/Login.jsx'
 import PageNotFound from './pages/NotFound.jsx'
+import Registrar from './pages/Registrar.jsx'
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
     children: [
       {path: '/', element: <Home />},
       {path: '/login', element: <Login />},
+      {path: '/registrar', element: <Registrar />},
       {path: '*', element: <PageNotFound />},
     ]
   }
