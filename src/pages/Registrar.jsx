@@ -50,37 +50,40 @@ function Registrar() {
 
     const registrarLocal = () => {
         for(let i = 0; i < inputs.length; i++){
-            if(inputs[i].value == ''){
-                alert('Os campos precisam ser preenchidos')
-                break
-            }else if(inputs[3].value != inputs[4].value){
-                alert('as senhas não são iguais!!!!')
-                break
-            }else{
-                let ususario = [{
-                    nome: inputs[0].value,
-                    email: inputs[1].value, 
-                    nascimento: inputs[2].value, 
-                    senha: inputs[3].value
-                }]
-                verificaUsuario(ususario)
-                localStorage.setItem('Usuarios', JSON.stringify(ususario))
-                navigate(`/quizzes/${inputs[0].value}`)
+            if(inputs[i].value === '') {
+                alert('Os campos precisam ser preenchidos');
+                return; // Use return para sair da função
+            } else if(inputs[3].value !== inputs[4].value) {
+                alert('As senhas não são iguais!');
+                return; // Use return para sair da função
             }
+        }
+        
+        let usuario = {
+            nome: inputs[0].value,
+            email: inputs[1].value, 
+            nascimento: inputs[2].value, 
+            senha: inputs[3].value
+        };
+    
+        if(verificaUsuario(usuario)) {
+            alert('Este email já está em uso');
+        } else {
+            let usuarios = JSON.parse(localStorage.getItem('Usuarios')) || [];
+            usuarios.push(usuario); // Adiciona o novo usuário
+            localStorage.setItem('Usuarios', JSON.stringify(usuarios)); // Salva todos os usuários
+            navigate(`/quizzes/${inputs[0].id}`);
         }
     }
-
-    function verificaUsuario(ususario){
-        let ususarios = JSON.parse(localStorage.getItem('Usuarios'))
-        console.log(ususarios, ususario);
-        if(ususarios == null) return true
-        for(let i = 0; i < ususarios.length; i++){
-            if(ususario[0] == ususarios[i]){
-                console.log('tem login ou não tem nada');
-                return True
+    
+    function verificaUsuario(usuario) {
+        let usuarios = JSON.parse(localStorage.getItem('Usuarios')) || [];
+        for(let i = 0; i < usuarios.length; i++) {
+            if(usuario.email === usuarios[i].email) {
+                return true; // Email já existe
             }
         }
-        return true
+        return false; // Email não existe
     }
 
     return ( 
