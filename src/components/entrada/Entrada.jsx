@@ -1,7 +1,10 @@
 import InputEntrada from './InputEntrada';
 import InputSubmit from './InputSubmit';
 
-function Entrada({ title, inputs, submit}) {
+function Entrada({ title, inputs, submit, funcao }) {
+
+    funcao('testasdadads')
+
     return ( 
         <div className='bg-branco w-[70vw] h[auto] mx-auto my-[25px] p-[20px] flex justify-between items-center drop-shadow-2xl'>
 
@@ -16,6 +19,7 @@ function Entrada({ title, inputs, submit}) {
                             label = {input.label}
                             type = {input.type}
                             esqueceuSenha = {input.esqueceuSenha}
+                            funcao = {funcao}
                         />
                     ))
                 }

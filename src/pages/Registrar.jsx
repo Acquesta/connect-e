@@ -23,6 +23,10 @@ const inputs = [
     },
 ] 
 
+const registrar = (input) => {
+    console.log(input);
+}
+
 function Registrar() {
     return ( 
         <>
@@ -30,6 +34,7 @@ function Registrar() {
                 title = 'Registrar'
                 inputs = {inputs}
                 submit = 'Registrar'
+                funcao = {registrar}
             />
         </>
      );
