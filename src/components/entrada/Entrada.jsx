@@ -1,9 +1,7 @@
 import InputEntrada from './InputEntrada';
 import InputSubmit from './InputSubmit';
 
-function Entrada({ title, inputs, submit, funcao }) {
-
-    funcao('testasdadads')
+function Entrada({ title, inputs, submit, funcaoValues, funcaoSubmit }) {
 
     return ( 
         <div className='bg-branco w-[70vw] h[auto] mx-auto my-[25px] p-[20px] flex justify-between items-center drop-shadow-2xl'>
@@ -16,15 +14,18 @@ function Entrada({ title, inputs, submit, funcao }) {
                 {
                     inputs.map((input) => (
                         <InputEntrada 
+                            key={input.id}
+                            id = {input.id}
                             label = {input.label}
                             type = {input.type}
                             esqueceuSenha = {input.esqueceuSenha}
-                            funcao = {funcao}
+                            funcao = {funcaoValues}
                         />
                     ))
                 }
                 <InputSubmit
                     value = {submit}
+                    funcao = {funcaoSubmit}
                 />
             </div>
         </div>

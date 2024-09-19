@@ -10,6 +10,7 @@ import Home from './pages/Home.jsx'
 import Login from './pages/Login.jsx'
 import PageNotFound from './pages/NotFound.jsx'
 import Registrar from './pages/Registrar.jsx'
+import Quizzes from './pages/Quizzes.jsx'
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
       {path: '/', element: <Home />},
       {path: '/login', element: <Login />},
       {path: '/registrar', element: <Registrar />},
+      {path: '/quizzes/:id', element: <Quizzes />},
       {path: '*', element: <PageNotFound />},
     ]
   }
