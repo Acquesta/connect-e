@@ -1,6 +1,5 @@
-import { useState } from "react";
 import Entrada from "../components/entrada/Entrada";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const inputs = [
     {
@@ -45,7 +44,6 @@ function Registrar() {
                 inputs[i].value = value
             }
         }
-        // console.log(inputs);
     }
 
     const registrarLocal = () => {
