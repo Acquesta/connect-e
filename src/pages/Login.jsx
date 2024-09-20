@@ -34,8 +34,11 @@ function Login() {
             email: inputs[0].value,
             senha: inputs[1].value
         }
-        if(verificaUsuario(usuario)){
-            navigate(`/quizzes/${inputs[0].value}`)
+
+        let validaUsuario = verificaUsuario(usuario)
+        console.log(validaUsuario);
+        if(validaUsuario[0]){
+            navigate(`/quizzes/${validaUsuario[1]}`)
         }else{
             alert('Senha ou email incorretos')
         }
@@ -46,10 +49,10 @@ function Login() {
         for(let i = 0; i < usuarios.length; i++){
             console.log(usuarios[i]);
             if(usuario.email == usuarios[i].email && usuario.senha == usuarios[i].senha){
-                return true
+                return [true, usuarios[i].id]
             }
         }
-        return false
+        return [false, '']
     }
 
     return ( 

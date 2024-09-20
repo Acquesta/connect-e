@@ -56,8 +56,11 @@ function Registrar() {
                 return; // Use return para sair da função
             }
         }
+
+        let usuarios = JSON.parse(localStorage.getItem('Usuarios')) || [];
         
         let usuario = {
+            id: usuarios.length + 1,
             nome: inputs[0].value,
             email: inputs[1].value, 
             nascimento: inputs[2].value, 
@@ -67,10 +70,9 @@ function Registrar() {
         if(verificaUsuario(usuario)) {
             alert('Este email já está em uso');
         } else {
-            let usuarios = JSON.parse(localStorage.getItem('Usuarios')) || [];
             usuarios.push(usuario); // Adiciona o novo usuário
             localStorage.setItem('Usuarios', JSON.stringify(usuarios)); // Salva todos os usuários
-            navigate(`/quizzes/${inputs[0].id}`);
+            navigate(`/quizzes/${usuario.id}`);
         }
     }
     
