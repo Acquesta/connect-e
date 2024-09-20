@@ -64,7 +64,14 @@ function Registrar() {
             nome: inputs[0].value,
             email: inputs[1].value, 
             nascimento: inputs[2].value, 
-            senha: inputs[3].value
+            senha: inputs[3].value,
+            quizzes: {
+                pontos: 0,
+                quizAtual: 0,
+                acertos: 0,
+                erros: 0,
+            }
+
         };
     
         if(verificaUsuario(usuario)) {

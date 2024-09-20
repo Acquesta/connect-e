@@ -9,7 +9,7 @@ import facebook from '../../assets/image/facebookIcon.png'
 function Footer() {
     return ( 
         <div className="h-[25vh] bg-azulMahindra text-branco flex justify-between px-14 py-10">
-            <div className="flex justify-between w-1/5 text-xl">
+            <div className="flex justify-between w-1/5 text-[1vw]">
                 <div className="flex flex-col justify-evenly">
                     <NavLink to='/'>Home</NavLink>
                     <NavLink to='/login'>Quizzes</NavLink>
@@ -23,7 +23,7 @@ function Footer() {
                     <p>Tech Mahindra</p>
                 </div>
             </div>
-            <div className="my-auto">
+            <div className="my-auto w-1/3">
                 <img src={logo} alt="" />
             </div>
             <div className="my-auto">

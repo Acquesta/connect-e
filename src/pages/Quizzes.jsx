@@ -1,7 +1,12 @@
+import HomeQuizzes from "../components/homeQuizzes";
+
 function Quizzes() {
     return ( 
         <>
-            <h1>Quizzes</h1>
+            <HomeQuizzes 
+                title = 'Comece sua jornada e ganhe'
+                pontos = '300 pontos'
+            />
         </>
      );
 }

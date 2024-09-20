@@ -18,6 +18,19 @@ export default {
     colors: {
       'azulMahindra': '#0000FF',
       'branco': '#ffffff',
+    },
+    keyframes: {
+      animationLine: {
+        '0%': {'stroke-dashoffset': 2000},
+        '100%': {'stroke-dashoffset': 0}
+      },
+      animationAparece: {
+        '0%': {'opacity': 0},
+        '100%': {'opacity': 1}
+      }
+    },
+    animation: {
+      animationLine: 'animationLine 5s ease-in fowards'
     }
   },
   plugins: [],
