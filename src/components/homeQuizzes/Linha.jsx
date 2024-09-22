@@ -13,8 +13,8 @@ function Linha({ className, style }) {
         style={{ strokeDashoffset: 0, strokeDasharray: 2000 }}
         d="M25 69.9492C269.386 58.381 389.943 207.384 626.746 171.37C777.682 148.415 848.083 20.5861 1006.95 26C1152.91 30.9738 1195.5 125 1351.5 171.37"
         stroke="#181515"
-        stroke-width="25"
-        stroke-linecap="round"
+        strokeWidth="25"
+        strokeLinecap="round"
       />
       <circle cx="550" cy="170" r="30" fill="#0000FF" />
       <circle cx="1000" cy="30" r="30" fill="#0000FF" />

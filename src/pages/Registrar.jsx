@@ -50,10 +50,10 @@ function Registrar() {
         for(let i = 0; i < inputs.length; i++){
             if(inputs[i].value === '') {
                 alert('Os campos precisam ser preenchidos');
-                return; // Use return para sair da função
+                return;
             } else if(inputs[3].value !== inputs[4].value) {
                 alert('As senhas não são iguais!');
-                return; // Use return para sair da função
+                return;
             }
         }
 
