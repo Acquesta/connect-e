@@ -27,7 +27,7 @@ export default function Hotbar() {
           </li>
           <li>
           <NavLink
-              to={"/quizzes/0"}
+              to={"/quizzes"}
               style={({ isActive }) => {
                 return {
                   fontWeight: isActive ? "bold" : "",

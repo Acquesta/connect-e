@@ -18,7 +18,8 @@ export default {
     colors: {
       'azulMahindra': '#0000FF',
       'branco': '#ffffff',
-      'preto': '#000000'
+      'preto': '#000000',
+      'correta': '#45CB4B'
     },
     keyframes: {
       animationLine: {

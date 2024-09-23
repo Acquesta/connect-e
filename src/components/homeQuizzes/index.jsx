@@ -8,7 +8,7 @@ function HomeQuizzes({ title, pontos }) {
 
     const usuarios = JSON.parse(localStorage.getItem("Usuarios"));
     const { id } = useParams()
-    // console.log(usuarios)
+    console.log(usuarios)
 
     const pegaUsuario = () => {
         for(let i = 0; i < usuarios.length; i++){

@@ -45,7 +45,7 @@ function Noticias() {
     const progressToNextCard = () => {
         setBarWidth(100); 
         setTimeout(() => {
-            setCardTarget((prev) => (prev + 1) % cards.length); // Muda o cartão
+            setCardTarget((prev) => (prev + 1) % cards.length); 
             setBarWidth(0); 
         }, 9000); 
     };
