@@ -1,15 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Resposta from "./Resposta";
 
 function CardQuiz({ quizzes }) {
 
     const [questao, setQuestao] = useState(0)
 
+    const [input, setInput] = useState('')
+
     const quiz = quizzes['questions'][questao]
-    console.log(quiz[0]);
+    // console.log(quiz);
 
     const respostaClicada = (input) => {
-        console.log(input);
+        // console.log(input);
+        setInput(input)
+        if(input == quiz.answer){
+            // console.log('Resposta certa');
+            setRespostaUser('correta')
+        }if(input != quiz.answer){
+            // console.log('resposta errada');
+            setRespostaUser('errada')
+        }
     }
 
     return ( 
@@ -23,7 +33,6 @@ function CardQuiz({ quizzes }) {
                         <Resposta
                             key={resposta}
                             resposta={resposta}
-                            correta={resposta == quiz.answer ? true : false}
                             funcao={respostaClicada}
                         />
                     ))
