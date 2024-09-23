@@ -19,7 +19,8 @@ export default {
       'azulMahindra': '#0000FF',
       'branco': '#ffffff',
       'preto': '#000000',
-      'correta': '#45CB4B'
+      'correta': '#45CB4B',
+      'errada': '#F15858'
     },
     keyframes: {
       animationLine: {

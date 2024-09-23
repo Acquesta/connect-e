@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       {path: '/registrar', element: <Registrar />},
       {path: '/quizzes/:id', element: <Quizzes />},
       {path: '/quizzes', element: <Login />},
-      {path: '/quiz/:id', element: <Quiz />},
+      {path: '/quiz/:user/:idQuiz', element: <Quiz />},
       {path: '*', element: <PageNotFound />},
     ]
   }

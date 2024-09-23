@@ -1,3 +1,4 @@
+import { useParams } from "react-router-dom";
 import CardQuiz from "../components/cardQuiz";
 
 
@@ -118,10 +119,18 @@ function Quiz() {
         ]
     }
 
+    const {user, idQuiz} = useParams()
+
+    const usuarios = JSON.parse(localStorage.getItem('Usuarios'))
+    const usuario = usuarios.find(usuario => usuario.id == user)
+
+    // console.log(usuario);    
+    
     return ( 
         <>
             <CardQuiz 
-                quizzes={quiz_data}
+                quiz={quiz_data['questions'][idQuiz]}
+                idUser={user}
             />
         </>
      );

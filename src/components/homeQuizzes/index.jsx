@@ -1,10 +1,8 @@
-import { NavLink, useNavigate, useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import CardPontos from "./CardPontos";
 import Linha from "./Linha";
 
 function HomeQuizzes({ title, pontos }) {
-
-    const navigate = useNavigate()
 
     const usuarios = JSON.parse(localStorage.getItem("Usuarios"));
     const { id } = useParams()
@@ -34,7 +32,7 @@ function HomeQuizzes({ title, pontos }) {
                     className = 'w-full animate-[animationLine_10s_ease-in]'
                 />
             </div>
-            <NavLink className="bg-azulMahindra w-[90%] mx-auto my-6 py-2 text-branco text-2xl text-center font-bold rounded-md " to='/quiz/0'>
+            <NavLink className="bg-azulMahindra w-[90%] mx-auto my-6 py-2 text-branco text-2xl text-center font-bold rounded-md " to={`/quiz/${usuario.id}/${usuario.quizzes.quizAtual}`}>
                 JOGAR
             </NavLink>
             <CardPontos 
