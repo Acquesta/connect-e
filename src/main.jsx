@@ -11,6 +11,7 @@ import Login from './pages/Login.jsx'
 import PageNotFound from './pages/NotFound.jsx'
 import Registrar from './pages/Registrar.jsx'
 import Quizzes from './pages/Quizzes.jsx'
+import Quiz from './pages/Quiz.jsx'
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       {path: '/registrar', element: <Registrar />},
       {path: '/quizzes/:id', element: <Quizzes />},
       {path: '/quizzes', element: <Login />},
+      {path: '/quiz/:id', element: <Quiz />},
       {path: '*', element: <PageNotFound />},
     ]
   }

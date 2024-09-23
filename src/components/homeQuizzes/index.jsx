@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { NavLink, useNavigate, useParams } from "react-router-dom";
 import CardPontos from "./CardPontos";
 import Linha from "./Linha";
 
@@ -34,7 +34,9 @@ function HomeQuizzes({ title, pontos }) {
                     className = 'w-full animate-[animationLine_10s_ease-in]'
                 />
             </div>
-            <button className="bg-azulMahindra w-[90%] mx-auto my-6 py-2 text-branco text-2xl font-bold rounded-md ">JOGAR</button>
+            <NavLink className="bg-azulMahindra w-[90%] mx-auto my-6 py-2 text-branco text-2xl text-center font-bold rounded-md " to='/quiz/0'>
+                JOGAR
+            </NavLink>
             <CardPontos 
                 pontos={pontos}
             />
