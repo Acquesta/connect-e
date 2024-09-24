@@ -4,8 +4,15 @@ import { NavLink } from "react-router-dom";
 
 function CardQuiz({ quiz, idUser }) {
 
+    var date = new Date
+    var hora = date.getHours()
+    var minutos = date.getMinutes()
+    var segundos = date.getSeconds()
+
     const usuarios = JSON.parse(localStorage.getItem('Usuarios'))
     const usuario = usuarios.find(usuario => usuario.id == idUser)
+
+    usuario.quizzes.comeco = [hora, minutos, segundos]
 
     useEffect(() => {
         setRespostaUser('')
@@ -28,6 +35,7 @@ function CardQuiz({ quiz, idUser }) {
             setRespostaUser('errada')
         }
         usuario.quizzes.quizAtual = quiz.id + 1
+        console.log(usuarios);
         localStorage.setItem('Usuarios', JSON.stringify(usuarios))
     }
     

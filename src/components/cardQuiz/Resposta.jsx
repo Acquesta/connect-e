@@ -14,7 +14,8 @@ function Resposta({ resposta, funcao, corInput = 'preto'}) {
     })
 
     return ( 
-        <>
+        <>  
+            
             <div onClick={() => {funcao(resposta)}} className={`flex justify-between items-center w-[30vw] bg-${corFundo} border-${cor} border-2 px-3 py-3 rounded-2xl hover:cursor-pointer shadow-xl`}>
                 <div className={`w-[4vw] h-[4vw] border-${cor} border-2 rounded-full`}>
                 </div>

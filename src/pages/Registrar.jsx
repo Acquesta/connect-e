@@ -70,6 +70,8 @@ function Registrar() {
                 quizAtual: 0,
                 acertos: 0,
                 erros: 0,
+                comeco: 0,
+                fim: 0,
             }
 
         };
