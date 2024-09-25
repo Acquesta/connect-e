@@ -1,8 +1,13 @@
 import { useParams } from "react-router-dom";
 import CardQuiz from "../components/cardQuiz";
 
-
 function Quiz() {
+    var date = new Date
+    var hora = date.getHours()
+    var minutos = date.getMinutes()
+    var segundos = date.getSeconds()
+    
+    const dataComeco = [hora, minutos, segundos]
 
     const quiz_data = {
         questions: [
@@ -124,13 +129,18 @@ function Quiz() {
     const usuarios = JSON.parse(localStorage.getItem('Usuarios'))
     const usuario = usuarios.find(usuario => usuario.id == user)
 
-    // console.log(usuario);    
+    if(usuario.quizzes.comeco == 0){
+        usuario.quizzes.comeco = dataComeco
+    }
+    localStorage.setItem('Usuarios', JSON.stringify(usuarios))
+    console.log(usuario.quizzes.comeco);
     
     return ( 
         <>
             <CardQuiz 
                 quiz={quiz_data['questions'][idQuiz]}
                 idUser={user}
+                dataComeco={dataComeco}
             />
         </>
      );

@@ -4,15 +4,8 @@ import { NavLink } from "react-router-dom";
 
 function CardQuiz({ quiz, idUser }) {
 
-    var date = new Date
-    var hora = date.getHours()
-    var minutos = date.getMinutes()
-    var segundos = date.getSeconds()
-
     const usuarios = JSON.parse(localStorage.getItem('Usuarios'))
     const usuario = usuarios.find(usuario => usuario.id == idUser)
-
-    usuario.quizzes.comeco = [hora, minutos, segundos]
 
     useEffect(() => {
         setRespostaUser('')
@@ -75,7 +68,7 @@ function CardQuiz({ quiz, idUser }) {
             <button className={`bg-azulMahindra text-branco mx-auto px-12 py-3 rounded-xl`}>
                 {
                     quiz.id + 1 == 10 ? 
-                        <NavLink to={`/quizzes/${idUser}`}>Terminar</NavLink> : 
+                        <NavLink to={`/quizFinal/${idUser}`}>Terminar</NavLink> : 
                         <NavLink to={`/quiz/${idUser}/${quiz.id + 1}`} >Cotinuar</NavLink>
                 }
                 
