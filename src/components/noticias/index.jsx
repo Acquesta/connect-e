@@ -1,9 +1,9 @@
 
 import { useInView } from "react-intersection-observer";
 import Noticia1 from "../../assets/image/noticia1.png";
-import Noticia2 from "../../assets/image/noticia2.png";
-import Noticia3 from "../../assets/image/noticia3.png";
-import Noticia4 from "../../assets/image/noticia4.png";
+import Noticia2 from "../../assets/image/Noticia2.png";
+import Noticia3 from "../../assets/image/Noticia3.png";
+import Noticia4 from "../../assets/image/Noticia4.png";
 import CardsNoticias from "./CardsNoticias";
 import ImagemNoticia from "./ImagemNoticia";
 import { useEffect, useState } from "react";
