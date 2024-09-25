@@ -37,6 +37,8 @@ const inputs = [
 function Registrar() {
 
     const navigate = useNavigate();
+    
+    const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
     const cadastrarValues = (input, value) => {
         for(let i = 0; i < inputs.length; i++){
@@ -46,15 +48,25 @@ function Registrar() {
         }
     }
 
+
     const registrarLocal = () => {
         for(let i = 0; i < inputs.length; i++){
             if(inputs[i].value === '') {
                 alert('Os campos precisam ser preenchidos');
                 return;
-            } else if(inputs[3].value !== inputs[4].value) {
-                alert('As senhas não são iguais!');
-                return;
             }
+        }  
+
+        if(inputs[3].value !== inputs[4].value) {
+            alert('As senhas não são iguais!');
+            return;
+        } 
+
+        console.log(regexEmail.test(inputs[1].value));
+
+        if(regexEmail.test(inputs[1].value) == false){
+            alert('Email inválido')
+            return;
         }
 
         let usuarios = JSON.parse(localStorage.getItem('Usuarios')) || [];

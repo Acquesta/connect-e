@@ -3,9 +3,14 @@ import usuario from "../../assets/icons/usuario2.svg";
 import busca from "../../assets/icons/busca.svg";
 import { useState } from "react";
 import Polygon from "../../assets/icons/Polygon-1";
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 
-export default function Hotbar() {
+export default function Hotbar({ entrar }) {
+
+  
+  const user = useParams()
+  console.log(user);
+
   const [card, setCard] = useState("hidden");
 
   return (
@@ -60,7 +65,7 @@ export default function Hotbar() {
             </div>
           </div>
           <div>
-            <div className="relative">
+            <div className={`${entrar} relative`}>
               <img
                 className="w-12 h-12 cursor-pointer"
                 src={usuario}

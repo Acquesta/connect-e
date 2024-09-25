@@ -33,8 +33,8 @@ function HomeQuizzes({ title, pontos}) {
                     corBolinha1 = {pontos != 0 ? '#45CB4B' : '#0000FF'}
                 />
             </div>
-            <NavLink className="bg-azulMahindra w-[90%] mx-auto my-6 py-2 text-branco text-2xl text-center font-bold rounded-md " to={`/quiz/${usuario.id}/${usuario.quizzes.quizAtual}`}>
-                JOGAR
+            <NavLink className="bg-azulMahindra w-[90%] mx-auto my-6 py-2 text-branco text-2xl text-center font-bold rounded-md " to={`/quiz/${usuario.id}/${usuario.quizzes.quizAtual == 10 ? 0 : usuario.quizzes.quizAtual}`}>
+                {usuario.quizzes.quizAtual == 10 ? 'Refazer os quizzes' : 'JOGAR'}
             </NavLink>
             <CardPontos 
                 pontos={`${pontos} pontos`}

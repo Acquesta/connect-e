@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <Hotbar/>
+      <Hotbar />
       <Outlet />
       <Footer />
     </>

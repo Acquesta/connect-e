@@ -26,9 +26,9 @@ const router = createBrowserRouter([
       {path: '/quizzes', element: <Login />},
       {path: '/quiz/:user/:idQuiz', element: <Quiz />},
       {path: '/quizFinal/:id', element: <QuizFinal />},
-      {path: '*', element: <PageNotFound />},
+      {path: '/*', element: <PageNotFound />},
     ]
-  }
+  },
 ])
 
 createRoot(document.getElementById('root')).render(
