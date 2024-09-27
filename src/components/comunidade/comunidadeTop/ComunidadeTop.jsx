@@ -1,3 +1,4 @@
+import { list } from "postcss";
 import ComunidadeAmigos from "./ComunidadeAmigos";
 import ComunidadePesqusa from "./ComunidadePesquisa";
 
@@ -37,13 +38,14 @@ function ComunidadeTop({ usuarios, usuario, funcaoMostraPesquisa, mostraPesquisa
                        />
 
                        {
-                        mostraPesquisa == 'hidden' ? <ComunidadePesqusa usuariosAchados={usuariosAchados} mandaSolicitacao={mandaSolicitacao}/> : ''
+                            mostraPesquisa == 'hidden' ? <ComunidadePesqusa usuariosAchados={usuariosAchados} mandaSolicitacao={mandaSolicitacao}/> : ''
                        }
 
                         <h4 className="text-azulMahindra font-semibold text-[1.5vw]">Amigos</h4>
                         <ul className="text-[1.5vw] mx-3">
-                            <li>Lorenzo</li>
-                            <li>Eduardo</li>
+                            {
+                                usuario.amigos.amigos.map((amigo) => <li>{usuarios[amigo - 1].nome}</li>)
+                            }
                         </ul>
                     </div>
                 </div>

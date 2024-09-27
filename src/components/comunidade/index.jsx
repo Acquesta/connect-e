@@ -43,7 +43,8 @@ function SectionComunidade() {
     }    
     
     function aceitaPedido(idPedido){
-        setUserPedidos(prev => prev.filter(pedido => pedido !== idPedido ))      
+        addAmigo(idPedido)    
+        setUserPedidos(prev => prev.filter(pedido => pedido !== idPedido ))  
     }
 
     function resetarAmigos(){
@@ -51,6 +52,12 @@ function SectionComunidade() {
             amigos: [],
             pedidos: []
         }
+        localStorage.setItem('Usuarios', JSON.stringify(usuarios))
+    }
+
+    function addAmigo(idPedido){
+        usuario.amigos.amigos.push(idPedido)
+        console.log(usuario.amigos.amigos);
         localStorage.setItem('Usuarios', JSON.stringify(usuarios))
     }
 
