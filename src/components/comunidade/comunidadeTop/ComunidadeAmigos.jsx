@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function ComunidadeAmigos({ show, pedidos }) {
+function ComunidadeAmigos({ show, pedidos, aceitaPedido }) {
 
     const usuarios = JSON.parse(localStorage.getItem('Usuarios'))
 
@@ -13,11 +13,9 @@ function ComunidadeAmigos({ show, pedidos }) {
         })
     })
 
-    console.log(pedidosUsuarios);
-    
     return (
         <div className={`${show}`}>
-            <h4 className="text-azulMahindra font-semibold text-[1.5vw]">Solicitações</h4>
+                <h4 className="text-azulMahindra font-semibold text-[1.5vw]">Solicitações</h4>
                 {
                     pedidosUsuarios.map(usuario => (
                         
@@ -25,7 +23,7 @@ function ComunidadeAmigos({ show, pedidos }) {
                             <p>{usuario.nome}</p>
                             <div className="flex justify-between gap-1">
 
-                                <div className="w-5 h-5 border-[1px] border-[#A9B7CC] rounded-[4px] flex justify-center items-center cursor-pointer">
+                                <div onClick={() => aceitaPedido(usuario.id)} className="w-5 h-5 border-[1px] border-[#A9B7CC] rounded-[4px] flex justify-center items-center cursor-pointer">
                                     <svg className="w-4 h-4 size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                                         stroke="green">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />

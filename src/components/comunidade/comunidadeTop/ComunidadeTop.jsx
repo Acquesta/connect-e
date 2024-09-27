@@ -1,7 +1,7 @@
 import ComunidadeAmigos from "./ComunidadeAmigos";
 import ComunidadePesqusa from "./ComunidadePesquisa";
 
-function ComunidadeTop({ usuario, funcaoMostraPesquisa, mostraPesquisa, usuariosAchados, mandaSolicitacao, pedidos}) {
+function ComunidadeTop({ usuario, funcaoMostraPesquisa, mostraPesquisa, usuariosAchados, mandaSolicitacao, pedidos, aceitaPedido}) {
   
     return (
         <div className="w-[90%] mx-auto my-6">
@@ -29,6 +29,7 @@ function ComunidadeTop({ usuario, funcaoMostraPesquisa, mostraPesquisa, usuarios
                        <ComunidadeAmigos 
                             show={mostraPesquisa}
                             pedidos={pedidos}
+                            aceitaPedido={aceitaPedido}
                        />
 
                        {

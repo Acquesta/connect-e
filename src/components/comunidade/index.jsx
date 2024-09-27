@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import ComunidadeTop from "./comunidadeTop/comunidadeTop";
 import InputsRank from "./inputsRank";
 import ComunidadeRanks from "./comunidadeRanksAmigos";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function SectionComunidade() {
 
@@ -14,7 +14,7 @@ function SectionComunidade() {
     const [showPesquisa, setShowPesquisa] = useState('block')
     const [mostraUsuarios, setMostraUsuarios] = useState()
 
-    const [userPedidos, setUserPedidos] = useState([])
+    const [userPedidos, setUserPedidos] = useState(usuario.amigos.pedidos)
 
 
     function mostraPesquisa(value) {
@@ -38,8 +38,23 @@ function SectionComunidade() {
     function mandaSolicitacao(idUsuario){
         const user = usuarios.find(user => user.id == idUsuario)
         user.amigos.pedidos.push(usuario.id)
+        usuario.amigos.amigos.push(idUsuario)
         localStorage.setItem('Usuarios', JSON.stringify(usuarios))
     }    
+    
+    function aceitaPedido(idPedido){
+        console.log(userPedidos);
+        usuario.amigos.pedidos = 
+        setUserPedidos()
+    }
+
+    function resetarAmigos(){
+        usuario.amigos = {
+            amigos: [],
+            pedidos: []
+        }
+        localStorage.setItem('Usuarios', JSON.stringify(usuarios))
+    }
 
     return ( 
         <>
@@ -50,11 +65,12 @@ function SectionComunidade() {
                 procuraUsuario={procuraUsuario}
                 usuariosAchados={mostraUsuarios}
                 mandaSolicitacao={mandaSolicitacao}
-                pedidos={usuario.amigos.pedidos}
+                pedidos={userPedidos}
+                aceitaPedido={aceitaPedido}
             />
             <InputsRank />
             <ComunidadeRanks />
-
+            <button onClick={() => resetarAmigos()}>Resetar amigos</button>
         </>
      );
 }
