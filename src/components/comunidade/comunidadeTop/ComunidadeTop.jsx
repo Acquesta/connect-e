@@ -1,4 +1,3 @@
-import { list } from "postcss";
 import ComunidadeAmigos from "./ComunidadeAmigos";
 import ComunidadePesqusa from "./ComunidadePesquisa";
 

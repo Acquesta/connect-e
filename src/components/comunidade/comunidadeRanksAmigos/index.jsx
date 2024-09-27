@@ -1,6 +1,9 @@
 import Amigo from "./Amigo";
 
-function ComunidadeRanksAmigos() {
+function ComunidadeRanksAmigos({ usuarios, amigos }) {
+
+    
+
     return (
         <div className="w-[90%] mx-auto my-6">
             <h2 className="text-[3vw]">Amigos</h2>

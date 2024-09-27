@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
-import ComunidadeTop from "./comunidadeTop/comunidadeTop";
+import ComunidadeTop from "./comunidadeTop/ComunidadeTop.jsx";
 import InputsRank from "./inputsRank";
 import ComunidadeRanks from "./comunidadeRanksAmigos";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function SectionComunidade() {
 
@@ -75,7 +75,10 @@ function SectionComunidade() {
                 aceitaPedido={aceitaPedido}
             />
             <InputsRank />
-            <ComunidadeRanks />
+            <ComunidadeRanks 
+                usuarios={usuarios}
+                amigos={usuario.amigos.amigos}
+            />
             <button onClick={() => resetarAmigos()}>Resetar amigos</button>
         </>
      );

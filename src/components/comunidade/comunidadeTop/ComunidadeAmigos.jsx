@@ -19,7 +19,7 @@ function ComunidadeAmigos({ show, pedidos, aceitaPedido }) {
         <div className={`${show}`}>
                 <h4 className="text-azulMahindra font-semibold text-[1.5vw]">Solicitações</h4>
                 {
-                    pedidos != [] ? (
+                    pedidos.length != 0 ? (
 
                         pedidosUsuarios.map(usuario => (
                             
@@ -43,7 +43,7 @@ function ComunidadeAmigos({ show, pedidos, aceitaPedido }) {
                             </div>
                         ))
 
-                    ) : <p>Nenhuma solicitação</p>
+                    ) : <p className="ml-3">Nenhuma solicitação</p>
 
                 }
         </div>
