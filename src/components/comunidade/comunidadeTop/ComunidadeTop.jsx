@@ -1,8 +1,12 @@
 import ComunidadeAmigos from "./ComunidadeAmigos";
 import ComunidadePesqusa from "./ComunidadePesquisa";
 
-function ComunidadeTop({ usuario, funcaoMostraPesquisa, mostraPesquisa, usuariosAchados, mandaSolicitacao, pedidos, aceitaPedido}) {
+function ComunidadeTop({ usuarios, usuario, funcaoMostraPesquisa, mostraPesquisa, usuariosAchados, mandaSolicitacao, pedidos, aceitaPedido}) {
   
+    usuario.amigos.pedidos = pedidos
+
+    localStorage.setItem('Usuarios', JSON.stringify(usuarios))
+
     return (
         <div className="w-[90%] mx-auto my-6">
             <div className=" flex justify-around text-[2vw] font-bold text-azulMahindra">

@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import ComunidadeTop from "./comunidadeTop/comunidadeTop";
 import InputsRank from "./inputsRank";
 import ComunidadeRanks from "./comunidadeRanksAmigos";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function SectionComunidade() {
 
@@ -43,9 +43,7 @@ function SectionComunidade() {
     }    
     
     function aceitaPedido(idPedido){
-        console.log(userPedidos);
-        usuario.amigos.pedidos = 
-        setUserPedidos()
+        setUserPedidos(prev => prev.filter(pedido => pedido !== idPedido ))      
     }
 
     function resetarAmigos(){
@@ -59,6 +57,7 @@ function SectionComunidade() {
     return ( 
         <>
             <ComunidadeTop
+                usuarios={usuarios}
                 usuario={usuario}
                 funcaoMostraPesquisa={mostraPesquisa}
                 mostraPesquisa={showPesquisa}
