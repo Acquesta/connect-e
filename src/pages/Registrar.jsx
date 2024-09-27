@@ -84,6 +84,10 @@ function Registrar() {
                 erros: 0,
                 comeco: 0,
                 fim: 0,
+            },
+            amigos: {
+                amigos: [],
+                pedidos: [],
             }
 
         };

@@ -9,7 +9,7 @@ export default function Hotbar({ entrar }) {
 
   
   const user = useParams()
-  console.log(user);
+  // console.log(user);
 
   const [card, setCard] = useState("hidden");
 
@@ -42,7 +42,18 @@ export default function Hotbar({ entrar }) {
               QUIZZES
             </NavLink>
           </li>
-          <li>COMUNIDADE</li>
+          <li>
+          <NavLink
+              to={"/comunidade/2"}
+              style={({ isActive }) => {
+                return {
+                  fontWeight: isActive ? "bold" : "",
+                };
+              }}
+            >
+              COMUNIDADE
+            </NavLink>
+          </li>
         </ul>
         <div className="flex items-center justify-center">
           <div className="w-[20vw] relative rounded-full shadow-sm mr-5 max-md:w-[10vw]">
