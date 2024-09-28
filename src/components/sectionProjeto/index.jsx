@@ -29,6 +29,7 @@ function SectionProjeto() {
                 {
                     cardSolucao.map((card) => (
                         <Card 
+                            key={card.title}
                             img={card.img}
                             title={card.title}
                             description={card.description}
