@@ -3,13 +3,9 @@ import usuario from "../../assets/icons/usuario2.svg";
 import busca from "../../assets/icons/busca.svg";
 import { useState } from "react";
 import Polygon from "../../assets/icons/Polygon-1";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-export default function Hotbar({ entrar }) {
-
-  
-  const user = useParams()
-  // console.log(user);
+export default function Hotbar({ entrar }) {  
 
   const [card, setCard] = useState("hidden");
 
@@ -44,7 +40,7 @@ export default function Hotbar({ entrar }) {
           </li>
           <li>
           <NavLink
-              to={"/comunidade/2"}
+              to={"/comunidade/1"}
               style={({ isActive }) => {
                 return {
                   fontWeight: isActive ? "bold" : "",

@@ -77,9 +77,9 @@ function SectionComunidade() {
             <InputsRank />
             <ComunidadeRanks 
                 usuarios={usuarios}
+                usuario={usuario}
                 amigos={usuario.amigos.amigos}
             />
-            <button onClick={() => resetarAmigos()}>Resetar amigos</button>
         </>
      );
 }

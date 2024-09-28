@@ -1,4 +1,11 @@
+import { useContext } from "react";
+
 function CardHome() {
+
+    const batata = useContext('teste');
+
+    console.log(batata);
+
     return (
         <div className="flex flex-col justify-center items-center my-6">
             <div className="bg-azulGradient w-[90vw] h-[90vh] rounded-[119px]">

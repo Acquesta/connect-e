@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function Amigo({ idAmigo, best }) {
+function Amigo({ usuario, best }) {
 
     const [trofeu, setTrofeu] = useState('hidden');
 
@@ -19,9 +19,9 @@ function Amigo({ idAmigo, best }) {
             </div>
             <div className="flex justify-between items-center">
                 <div className="w-[5vw] h-[5vw] bg-[#A9B7CC] rounded-full"></div>
-                <h3 className="text-[1vw] font-semibold ml-6">Lorenzo A.</h3>
+                <h3 className="text-[1vw] font-semibold ml-6">{usuario.nome}</h3>
             </div>
-            <h3 className="text-[1.5vw] text-azulMahindra font-semibold">12313 pontos</h3>
+            <h3 className="text-[1.5vw] text-azulMahindra font-semibold">{usuario.quizzes.pontos}</h3>
         </li>
         
     );
