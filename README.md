@@ -1,7 +1,12 @@
 
-# Connect-e
+# Grupo Connect-e
 
-Breve descrição do projeto, o que ele faz e o objetivo principal.
+- Alexia Ramalho 558385
+- Eduardo Dallabella 556803
+- Hellen Silva 559008
+- Heloísa Real 554535
+- Lorenzo Acquesta 557397
+
 
 ## Índice
 
@@ -56,9 +61,6 @@ Siga estas etapas para clonar e instalar o projeto localmente:
 
    O projeto será iniciado em `http://localhost:5173`.
 
-## Como Usar
-
-Descreva aqui como usar o projeto, os principais comandos e como interagir com as funcionalidades principais.
 
 ## Tailwind CSS
 
