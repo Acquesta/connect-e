@@ -13,7 +13,7 @@ export default function Hotbar({ entrar }) {
     <>
       <div className="flex justify-between items-center my-5 mx-8 text-azulMahindra">
         <img className="w-[15vw]" src={logo} alt="logo tech mahindra com formula e" />
-        <ul className="flex justify-between items-center w-[25%] text-[1.5vw]">
+        <ul className="flex justify-between items-center w-[35%] text-[1.5vw]">
           <li>
             <NavLink
               to={"/"}
@@ -36,6 +36,18 @@ export default function Hotbar({ entrar }) {
               }}
             >
               QUIZZES
+            </NavLink>
+          </li>
+          <li>
+          <NavLink
+              to={"/bicicletas/1"}
+              style={({ isActive }) => {
+                return {
+                  fontWeight: isActive ? "bold" : "",
+                };
+              }}
+            >
+              BICICLETAS
             </NavLink>
           </li>
           <li>

@@ -14,6 +14,7 @@ import Quizzes from './pages/Quizzes.jsx'
 import Quiz from './pages/Quiz.jsx'
 import QuizFinal from './pages/QuizFinal.jsx'
 import Comunidade from './pages/Comunidade.jsx'
+import Bicicletas from './pages/Bicicletas.jsx'
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
       {path: '/quizzes', element: <Login />},
       {path: '/quiz/:user/:idQuiz', element: <Quiz />},
       {path: '/quizFinal/:id', element: <QuizFinal />},
+      {path: '/bicicletas/:id', element: <Bicicletas />},
       {path: '/comunidade/:id', element: <Comunidade />},
       {path: '/*', element: <PageNotFound />},
     ]
